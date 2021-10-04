@@ -1,0 +1,370 @@
+@import './resets';
+@import './variables';
+
+@function weight($weight-name) { 
+}  
+
+@mixin flexCenter ($justify-direction,$align-direction) {
+  display: flex;
+  justify-content: $justify-direction;
+  align-items: $align-direction;
+}
+@mixin textProperties {
+  color: map-get($text-color, heading);
+  font-weight: map-get($font-weights, regular);
+  font-size: map-get($text-size, heading);
+}
+@mixin mobile {
+  @media (max-width:$mobile) {
+    @content
+  }
+}
+
+@mixin smallheight {
+  @media (max-height:$smallheight) {
+    @content
+  }
+}
+
+.hidden_background_image {
+  display: none;
+}
+
+input[type="checkbox"]:checked {
+  background: #4066A5;
+}
+
+.checkbox1 {
+  margin-left: 7.292vw;
+  width: 26px;
+  height: 26px;
+}
+
+.email_entry {
+  margin-top: $input_margin_top;
+  @include flexCenter (left,flex-start);
+  position: relative;
+  left: 5.208vw;
+  
+}
+.email_entry:focus {
+  box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+}
+.email_entry:hover {
+  box-shadow: 0px 30px 40px rgba(19, 24, 33, 0.06);
+  border: 1px solid #4066A5;
+}
+.email_box {
+  padding-left:2.083vw;
+  width: 30.208vw;
+  height: 6.481vh;
+  border: 1px solid #E3E3E4;
+  border-right: none;
+  border-left: 4px solid #4066A5;
+  background-color: #FFFFFF;
+}
+
+.email_arrow {
+  @include flexCenter (center,center);
+  width: 4.323vw;
+  height: 6.481vh;
+  border: 1px solid #E3E3E4;
+  border-left: none;
+  background-color: #FFFFFF;
+}
+
+.error_message {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+.error {
+  padding-top: 10px;
+  padding-left: 20px;
+  color: orange;
+}
+
+
+.main {
+  @include flexCenter(center, flex-start);
+  min-height: 100vh;
+  min-width: 100vw;
+  background:linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+  #{&}_content {
+    width: $main-1-width;
+    height: 100vh;
+    .top_bar {
+      @include flexCenter (left,flex-start);
+      img {
+        height: $logo_height;
+        width: 25px;
+        margin-top: $logo_margin_top;
+        margin-left: 5.208vw;
+      }
+      .logo_text {
+        font-size: map-get($text-size, normal);
+        margin-left: 15px;
+        margin-right: 5.885vw;
+        padding-top: 20px;
+        margin-top: $logo_margin_top;
+      }
+      .top_bar_a {
+        padding-top: 19px;
+        margin-top: $logo_margin_top;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: map-get($text-size, normal);
+        color: map-get($text-color, normal);
+        text-decoration: none;
+        font-weight: map-get($font-weights, regular);
+      }
+      .middle {
+        margin-left: 1.563vw;
+        margin-right: 1.563vw;
+      }
+    }
+    .main_b {
+      .main_head {
+        width: 20.833vw;
+        margin-left: 7.292vw;
+        h1 {
+          margin-top: $heading_margin_top;
+          font-size: map-get($text-size, heading);
+          font-weight: map-get($font-weights, regular);
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          color: map-get($text-color, heading);
+        }
+      }
+      .main_text {
+        width: 20.833vw;
+        margin-left: 7.292vw;
+        p {
+          margin-top: $subheading_margin_top;
+          font-size: map-get($text-size, normal);
+          font-weight: map-get($font-weights, regular);
+          color: map-get($text-color, normal);
+        }
+      }
+      .main_email {
+        margin-top: $input_margin_top;
+        @include flexCenter (left,flex-start);
+        position: relative;
+        left: 5.208vw;
+        
+      }
+      .check_terms {
+        @include flexCenter (left,flex-start);
+        margin-top: $terms_margin_top;
+
+        .just_terms {
+          font-size: map-get($text-size, normal);
+          color: map-get($text-color, normal);
+          padding-top: 5px;
+          margin-left: 0.781vw;
+          a {
+            color: map-get($text_color, heading);
+          }
+          a:hover {
+            color: map-get($text_color, hover);
+          }
+          a:visited {
+            color: map-get($text_color, pressed);
+          }
+        }
+      }
+      .main_line {
+        margin-top: $line_margin_top;
+        color: #E3E3E4;
+        height: 1px;
+        width: 20.833vw;
+        margin-left: 7.292vw;
+      }
+      .icons {
+        @include flexCenter (left,flex-start);
+        margin-top: $icons_margin_top;
+        .mini_icon {
+          @include flexCenter (center,center);
+          height: 46px;
+          width: 46px;
+          border: 2px solid #E3E3E4;
+          border-radius: 23px;
+          align-items: center;
+          .type1 img {
+            height: 16px;
+          }
+          .type2 img {
+            width: 16px;
+          }
+        }
+        .first_icon {
+          margin-left: 11.354vw;
+        }
+        .first_three {
+          margin-right: 1.042vw;
+        }
+        a img:last-child {
+          display: none; 
+        }  
+        a:hover img:last-child {
+          display: block;  
+        }
+        a:hover img:first-child {
+          display: none;  
+        }   
+        .facebook_icon:hover {
+          background: #4267B2;
+        }
+        .instagram_icon:hover {
+          background: #C13584;
+        }
+        .twitter_icon:hover {
+          background: #1DA1F2;
+        }
+        .youtube_icon:hover {
+          background: #FF0000;
+        }
+        .facebook_icon:active {
+          background: #2F4A80;
+        }
+        .instagram_icon:active {
+          background: #8F2762;
+        }
+        .twitter_icon:active {
+          background: #177FBF;
+        }
+        .youtube_icon:active {
+          background: #CC0000;
+        }
+
+      }
+    }
+  }
+
+  #{&}_pineapple {
+    width: $main-2-width;
+    height: 100vh;
+    img {
+      width: $main-2-width;
+      height: 100vh;
+      object-fit: cover
+    }
+  }
+  @include mobile {
+    .hidden_background_image {
+      display: block;
+    }
+    #{&}_content {
+      width: 100vw;
+      .top_bar {
+        align-items:center;
+        height: 8.128vh;
+        width: 100%;
+        padding: 0;
+        img {
+          margin-top: 1.232vh;
+          margin-left: 5.333vw;
+        }
+        .top_link {
+          margin-top: 1.232vh;
+        }
+        .first_link {
+          margin-left: 27.733vw;
+        }
+        .middle {
+          margin-left: 5.333vw;
+          margin-right: 5.333vw;
+        }
+        background-color: #FFFFFF;
+      }
+      .main_b {
+        overflow: hidden;
+        width: 100%;
+        height: 91.872vh;
+        /*
+        background:color url(../img/images/image_summer.png) no-repeat;
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-size: cover;
+        */
+      }
+      .main_mobile {
+        background:linear-gradient(180deg, #FFFFFF 0%, #F2F5FA 100%);
+        position: absolute;
+        top: 0;
+        width: 89.333vw;
+        height:45.690vh;
+        margin-left: 5.334vw;
+        margin-top: 27.155vh;
+
+        .victory_logo{
+          margin-top: 4.803vh;
+        }
+
+        .main_head {
+          margin-left: 5.970vw;
+          margin-top: 8.086vh;
+          width: 88.060%;
+          h1 {
+            margin: 0;
+            font-size: map-get($text-size, heading_mobile );
+          }
+        }
+        .main_text {
+          width: 88.060%;
+          margin-left: 5.970vw;
+          margin-top: 2.695vh;
+          p {
+            margin: 0;
+            font-size: map-get($text-size, normal_mobile);
+          }
+
+        }
+        .main_email {
+          left: 5.970vw;
+          margin-top: 5.391vh;
+          width: 88.060%;
+        }
+        .check_terms {
+          margin-top: 5.391vh;
+        }
+        .main_line {
+          width: 88.060%;
+          margin-left: 5.970vw;
+          margin-top: 5.391vh;
+
+        }
+        .icons {
+          margin-top: 5.391vh;
+          .first_icon {
+            margin-left: 15.821vw;
+          }
+          .first_three {
+            margin-right: 2.985vw;
+          }
+        }
+      }
+    }
+    .main_pineapple, .logo_text {
+      display: none;
+    }
+
+    .email_box {
+      padding-left:2.083vw;
+      width: 62.667vw;
+      height: 7.389vh;
+
+    }
+    
+    .email_arrow {
+      width: 16vw;
+      height: 7.389vh;
+    }
+
+  }
+
+  @include smallheight {
+    .main_mobile {
+      height:60.690vh;
+    }
+  }
+}
+
+

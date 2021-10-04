@@ -1,0 +1,32 @@
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 700
+);
+$text-size: (
+  "normal": 16px,
+  "heading":32px,
+  "heading_mobile":24px,
+  "normal_mobile":14px
+);
+
+$text-color: (
+  "normal": #6A707B,
+  "heading":#131821,
+  "hover":#4066A5,
+  "pressed":#233759
+);
+
+$main-1-width: 35.417vw;
+$main-2-width: 64.583vw;
+$logo_margin_top: 9.259vh;
+$logo_height: 40px;
+$heading_margin_top:21.667vh;
+$subheading_margin_top:1.389vh;
+$input_margin_top:4.630vh;
+$terms_margin_top:4.907vh;
+$line_margin_top:4.630vh;
+$icons_margin_top:4.630vh;
+
+$mobile: 1000px;
+$smallheight: 1000px;

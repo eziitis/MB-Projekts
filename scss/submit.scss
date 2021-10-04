@@ -1,0 +1,53 @@
+@import './variables';
+
+#sub_head {
+  margin-top: 2.778vh;
+}
+
+#text_head {
+  margin-top: 1.852vh;
+}
+
+.victory_logo {
+  margin-top:11.944vh;
+  margin-left:7.292vw;
+}
+
+.main{
+  @include mobile {
+    #victor_logo {
+      margin-top: 4.803vh;
+    }
+    #{&}_content {
+      .main_mobile {
+        .main_head {
+          margin-left: 5.970vw;
+          margin-top: 8.086vh;
+          width: 88.060%;
+          h1 {
+            margin: 0;
+            font-size: map-get($text-size, heading_mobile );
+          }
+        }
+        .main_text {
+          width: 88.060%;
+          margin-left: 5.970vw;
+          margin-top: 2.695vh;
+          p {
+            margin: 0;
+            font-size: map-get($text-size, normal_mobile);
+          }
+        }
+        .main_line {
+          width: 88.060%;
+          margin-left: 5.970vw;
+          margin-top: 5.391vh;
+
+        }
+      }
+    }
+  }
+} 
+
+
+

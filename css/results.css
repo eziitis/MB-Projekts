@@ -1,0 +1,23 @@
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.table_data {
+  border: 2px solid black;
+  padding: 3px;
+  height: 20px;
+}
+
+.button_stack {
+  width: 30vw;
+}
+
+.mar_top {
+  margin-top: 30px;
+}
+
+.mar_left {
+  margin-left: 20px;
+}
